@@ -309,7 +309,7 @@ body {
 
 .window-title {
   font-family: var(--font-ui);
-  font-size: 11.5px;
+  font-size: 13px;
   color: #fff;
   flex: 1;
   white-space: nowrap;
@@ -462,7 +462,7 @@ body {
 
 .status-text {
   font-family: var(--font-sys);
-  font-size: 15px;
+  font-size: 17px;
   color: var(--ink);
   padding: 0 5px;
   border: 1px solid;
@@ -472,7 +472,7 @@ body {
 
 .status-legend {
   font-family: var(--font-sys);
-  font-size: 13px;
+  font-size: 15px;
   color: #555;
   display: flex;
   align-items: center;
@@ -502,7 +502,7 @@ body {
   border-bottom: 2px solid;
   border-color: var(--bevel-dark) var(--bevel-white) var(--bevel-white) var(--bevel-dark);
   font-family: var(--font-ui);
-  font-size: 11px;
+  font-size: 12px;
   color: var(--ink);
   letter-spacing: 0.04em;
   user-select: none;
@@ -510,7 +510,7 @@ body {
 }
 .wh-dot  { width: 10px; flex-shrink: 0; }
 .wh-title { flex: 1; }
-.wh-year  { font-family: var(--font-sys); font-size: 13px; white-space: nowrap; opacity: 0.7; }
+.wh-year  { font-family: var(--font-sys); font-size: 15px; white-space: nowrap; opacity: 0.7; }
 
 .works-list-ul { padding: 2px 0; }
 
@@ -521,7 +521,7 @@ body {
   padding: 5px 6px;
   cursor: pointer;
   font-family: var(--font-ui);
-  font-size: 11.5px;
+  font-size: 13px;
   color: var(--ink);
   border: 1px solid transparent;
   letter-spacing: 0.01em;
@@ -554,7 +554,7 @@ body {
 .work-title { flex: 1; font-style: italic; }
 .work-meta {
   font-family: var(--font-sys);
-  font-size: 13px;
+  font-size: 15px;
   opacity: 0.55;
   white-space: nowrap;
 }
@@ -594,7 +594,7 @@ body {
 .reading-empty-title {
   font-family: var(--font-title);
   font-style: italic;
-  font-size: 21px;
+  font-size: 23px;
   color: #7a6040;
   letter-spacing: 0.06em;
   line-height: 1.2;
@@ -602,7 +602,7 @@ body {
 
 .reading-empty-hint {
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: 13px;
   color: #9a8060;
   font-style: italic;
   line-height: 1.8;
@@ -619,7 +619,7 @@ body {
 
 .reading-title {
   font-family: var(--font-title);
-  font-size: 25px;
+  font-size: 27px;
   font-style: italic;
   color: #1a0a06;
   margin-bottom: 5px;
@@ -630,7 +630,7 @@ body {
 
 .reading-meta {
   font-family: var(--font-sys);
-  font-size: 15px;
+  font-size: 17px;
   color: #7a6050;
   margin-bottom: 20px;
   padding-bottom: 14px;
@@ -640,7 +640,7 @@ body {
 
 .reading-text {
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.95;
   color: #2a1a0e;
   white-space: pre-wrap;
@@ -695,7 +695,7 @@ body {
 
 .author-name {
   font-family: var(--font-title);
-  font-size: 28px;
+  font-size: 30px;
   font-style: italic;
   color: var(--titlebar-start);
   margin-bottom: 0;
@@ -706,7 +706,7 @@ body {
 
 .author-degree {
   font-family: var(--font-ui);
-  font-size: 10px;
+  font-size: 11px;
   color: #7a5a9a;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -726,7 +726,7 @@ body {
 
 .about-body p {
   font-family: var(--font-body);
-  font-size: 12.5px;
+  font-size: 13px;
   line-height: 2.08; /* match ruled line height */
   color: #160c04;
   margin-bottom: 0;
@@ -791,7 +791,7 @@ body {
 
 .contact-label {
   font-family: var(--font-sys);
-  font-size: 14px;
+  font-size: 16px;
   color: #4d2a6a;
   letter-spacing: 0.08em;
   line-height: 1;
@@ -799,7 +799,7 @@ body {
 
 .contact-link, .contact-value {
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: 13px;
   color: var(--ink);
   line-height: 1.4;
 }
@@ -808,7 +808,7 @@ body {
 
 .contact-note {
   font-family: var(--font-body);
-  font-size: 11.5px;
+  font-size: 12.5px;
   font-style: italic;
   color: #5a4030;
   padding: 9px 12px;
@@ -852,7 +852,7 @@ body {
 
 .wip-label {
   font-family: var(--font-sys);
-  font-size: 17px;
+  font-size: 19px;
   color: #6633aa;
   min-width: 68px;
   flex-shrink: 0;
@@ -861,7 +861,7 @@ body {
 
 .wip-value {
   font-family: var(--font-sys);
-  font-size: 17px;
+  font-size: 19px;
   color: #c8a8f0;
 }
 
@@ -888,7 +888,7 @@ body {
 
 .wip-progress-label {
   font-family: var(--font-sys);
-  font-size: 14px;
+  font-size: 16px;
   color: #5522aa;
   margin-bottom: 5px;
   letter-spacing: 0.05em;
@@ -1002,7 +1002,7 @@ body {
   border-color: rgba(180,140,255,0.4) #1a0840 #1a0840 rgba(180,140,255,0.4);
   box-shadow: inset 0 1px 0 rgba(180,140,255,0.12);
   font-family: var(--font-ui);
-  font-size: 11px;
+  font-size: 12px;
   color: #b898e0;
   white-space: nowrap;
   min-width: 76px;
@@ -1122,6 +1122,42 @@ body {
 }
 .menu-separator:hover { background: var(--bevel-dark) !important; color: inherit !important; }
 
+/* ─── DESKTOP GUIDANCE HINT ─── */
+#mob-shell   { display: none; }   /* hidden on desktop, shown in mobile @media */
+
+#desktop-hint {
+  position: fixed;
+  bottom: calc(var(--taskbar-h) + 10px);
+  right: 30px;
+  background: #ffffc0;
+  border: 1px solid var(--bevel-dark);
+  box-shadow: 1px 1px 0 rgba(0,0,0,0.55);
+  padding: 5px 12px;
+  font-family: var(--font-sys);
+  font-size: 17px;
+  color: #1a1a1a;
+  z-index: 998;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 500ms ease;
+  white-space: nowrap;
+}
+
+#desktop-hint.is-visible { opacity: 1; }
+
+/* Triangle pointing down toward taskbar */
+#desktop-hint::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: 26px;
+  width: 0; height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 8px solid #ffffc0;
+  filter: drop-shadow(0 1px 0 var(--bevel-dark));
+}
+
 /* ─── BOOT SCREEN — splash + CRT collapse ─── */
 #boot-screen {
   position: fixed;
@@ -1200,17 +1236,144 @@ body {
   100% { clip-path: inset(50% 0 50% 0);     filter: brightness(0); opacity: 0; }
 }
 
-/* ─── MOBILE FALLBACK ─── */
+/* ─── MOBILE LAYOUT ─── */
 @media (max-width: 768px) {
-  body { overflow: auto; }
-  .window {
-    position: relative !important;
-    left: auto !important; top: auto !important;
-    width: 100% !important; height: auto !important;
-    margin-bottom: 8px; z-index: auto !important;
+
+  /* Desktop-only chrome hidden */
+  #taskbar, #start-menu, #desktop-icons, #desktop-nameplate,
+  .crt-overlay, .star, #desktop-hint { display: none !important; }
+
+  /* Scrollable document */
+  html, body { overflow: auto; height: auto; min-height: 100%; }
+  body { background: #0c0418; }
+
+  /* ── Mobile shell ── */
+  #mob-shell {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: linear-gradient(105deg, #1a0840 0%, #281060 100%);
+    border-bottom: 1px solid rgba(153,85,221,0.4);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.55);
   }
-  .window-body    { max-height: 320px; }
-  .window-titlebar { cursor: default; }
-  #taskbar, #start-menu, #desktop-icons, #desktop-nameplate { display: none !important; }
-  .crt-overlay, .star { display: none; }
+
+  #mob-header {
+    padding: 12px 16px 8px;
+  }
+
+  .mob-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .mob-identity {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .mob-name {
+    font-family: var(--font-title);
+    font-style: italic;
+    font-size: 22px;
+    color: #ddc8ff;
+    line-height: 1;
+    letter-spacing: 0.04em;
+  }
+
+  .mob-sub {
+    font-family: var(--font-ui);
+    font-size: 10px;
+    color: #6644aa;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  #mob-nav {
+    display: flex;
+    border-top: 1px solid rgba(80,40,160,0.3);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  #mob-nav::-webkit-scrollbar { display: none; }
+
+  .mob-tab {
+    flex: 1;
+    min-width: 58px;
+    padding: 9px 4px 8px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-family: var(--font-ui);
+    font-size: 11px;
+    color: #7755aa;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 150ms, border-color 150ms;
+    white-space: nowrap;
+  }
+
+  .mob-tab.is-active {
+    color: #ddc8ff;
+    border-bottom-color: #9955dd;
+  }
+
+  /* ── Windows become full-width sections ── */
+  .window {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    display: none !important;
+    opacity: 1 !important;
+    resize: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .window.mob-visible {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: calc(100svh - 90px);
+  }
+
+  /* Titlebar becomes a section heading strip */
+  .window-titlebar {
+    cursor: default !important;
+    pointer-events: none !important;
+    border-bottom: 1px solid rgba(153,85,221,0.25) !important;
+  }
+
+  /* Window chrome hidden on mobile */
+  .window-controls,
+  .window-menubar,
+  .window-statusbar { display: none !important; }
+
+  /* Body scrolls naturally */
+  .window-body {
+    flex: 1 !important;
+    max-height: none !important;
+    overflow-y: auto !important;
+  }
+
+  /* Section-specific mobile tweaks */
+  .reading-pane-body { padding: 22px 20px 40px !important; }
+  .reading-empty     { min-height: 220px; }
+
+  .about-body  { padding: 16px 18px 40px 46px !important; }
+  .contact-body { padding: 12px 16px 32px !important; }
+  .nowwriting-body { padding: 0 !important; }
+  .wip-card { height: auto !important; min-height: 240px; }
+
+  /* Works list full height on mobile */
+  .works-body { overflow: visible !important; flex: 1 !important; }
+
+  /* Boot screen stays fixed during load */
+  #boot-screen { position: fixed !important; }
 }

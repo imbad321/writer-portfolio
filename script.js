@@ -551,11 +551,15 @@ The new owners have re-carpeted. The stair is quiet now. I know this because my 
       });
 
       // Bring reading pane forward
-      var rp = state.windows['win-reading'];
-      if (rp && (rp.minimized || rp.closed)) {
-        WindowManager.reopen('win-reading');
+      if (MobileNav.isMobile()) {
+        MobileNav.show('win-reading');
       } else {
-        WindowManager.bringToFront('win-reading');
+        var rp = state.windows['win-reading'];
+        if (rp && (rp.minimized || rp.closed)) {
+          WindowManager.reopen('win-reading');
+        } else {
+          WindowManager.bringToFront('win-reading');
+        }
       }
     },
   };
@@ -700,6 +704,60 @@ The new owners have re-carpeted. The stair is quiet now. I know this because my 
   };
 
   /* ═══════════════════════════════════════════════
+     MOBILE NAV
+  ═══════════════════════════════════════════════ */
+
+  var MobileNav = {
+    isMobile: function () { return window.innerWidth <= 768; },
+
+    init: function () {
+      if (!this.isMobile()) return;
+      this.show('win-about');
+      var self = this;
+      document.querySelectorAll('.mob-tab').forEach(function (btn) {
+        btn.addEventListener('click', function () { self.show(btn.dataset.tab); });
+      });
+    },
+
+    show: function (id) {
+      document.querySelectorAll('.window').forEach(function (w) { w.classList.remove('mob-visible'); });
+      document.querySelectorAll('.mob-tab').forEach(function (btn) {
+        var active = btn.dataset.tab === id;
+        btn.classList.toggle('is-active', active);
+        btn.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+      var target = document.getElementById(id);
+      if (target) {
+        target.classList.remove('is-hidden');
+        target.classList.add('mob-visible');
+      }
+    },
+  };
+
+  /* ═══════════════════════════════════════════════
+     DESKTOP HINT
+  ═══════════════════════════════════════════════ */
+
+  var DesktopHint = {
+    init: function () {
+      if (MobileNav.isMobile()) return;
+      var hint = document.getElementById('desktop-hint');
+      if (!hint) return;
+
+      setTimeout(function () {
+        hint.classList.add('is-visible');
+        setTimeout(function () { hint.classList.remove('is-visible'); }, 9000);
+      }, 2000);
+
+      // Dismiss when user opens any window from the taskbar
+      var tb = document.getElementById('taskbar-windows');
+      if (tb) tb.addEventListener('click', function () {
+        hint.classList.remove('is-visible');
+      }, { once: true });
+    },
+  };
+
+  /* ═══════════════════════════════════════════════
      WORKS FILTER
   ═══════════════════════════════════════════════ */
 
@@ -758,7 +816,11 @@ The new owners have re-carpeted. The stair is quiet now. I know this because my 
       Clock.init();
       StartMenu.init();
       DesktopIcons.init();
-      setTimeout(function () { WindowManager.bringToFront('win-about'); }, 500);
+      MobileNav.init();
+      DesktopHint.init();
+      setTimeout(function () {
+        if (!MobileNav.isMobile()) WindowManager.bringToFront('win-about');
+      }, 500);
     });
   });
 

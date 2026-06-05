@@ -35,6 +35,35 @@
     </div>
   </div>
 
+  <!-- Mobile shell: sticky header + tab nav (hidden on desktop via CSS) -->
+  <div id="mob-shell">
+    <header id="mob-header">
+      <div class="mob-logo">
+        <svg width="30" height="30" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="36" cy="36" r="34" stroke="#5522aa" stroke-width="1.5" fill="none"/>
+          <circle cx="36" cy="36" r="26" stroke="#3a1870" stroke-width="0.5" fill="none"/>
+          <text x="36" y="45" font-size="28" text-anchor="middle" fill="#9955dd" font-family="Georgia,serif" font-style="italic">SK</text>
+        </svg>
+        <div class="mob-identity">
+          <span class="mob-name">Shaheer Khan</span>
+          <span class="mob-sub">Creative Writing &middot; 2024</span>
+        </div>
+      </div>
+    </header>
+    <nav id="mob-nav" role="tablist" aria-label="Portfolio sections">
+      <button class="mob-tab is-active" data-tab="win-about"      role="tab" aria-selected="true">About</button>
+      <button class="mob-tab"           data-tab="win-works"      role="tab" aria-selected="false">Works</button>
+      <button class="mob-tab"           data-tab="win-reading"    role="tab" aria-selected="false">Reading</button>
+      <button class="mob-tab"           data-tab="win-contact"    role="tab" aria-selected="false">Contact</button>
+      <button class="mob-tab"           data-tab="win-nowwriting" role="tab" aria-selected="false">Writing</button>
+    </nav>
+  </div>
+
+  <!-- Desktop guidance balloon (hidden on mobile) -->
+  <div id="desktop-hint" role="status" aria-live="polite">
+    Explore &mdash; click taskbar buttons below to open more windows&nbsp;&darr;
+  </div>
+
   <!-- SVG filter definitions -->
   <svg class="svg-filters" aria-hidden="true">
     <defs>
