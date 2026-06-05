@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shaheer Khan — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Boot / loading screen — name splash + CRT collapse -->
+  <div id="boot-screen" aria-label="Loading" aria-hidden="true">
+    <div class="boot-splash">
+      <div class="boot-monogram" aria-hidden="true">
+        <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="36" cy="36" r="34" stroke="#5522aa" stroke-width="1.5" fill="none"/>
+          <circle cx="36" cy="36" r="30" stroke="#3a1870" stroke-width="0.5" stroke-dasharray="3 4" fill="none"/>
+          <circle cx="36" cy="36" r="26" stroke="#2a1258" stroke-width="0.4" fill="none"/>
+          <path d="M36 2 L38 7 L36 6 L34 7 Z" fill="#9955dd"/>
+          <path d="M36 70 L38 65 L36 66 L34 65 Z" fill="#9955dd"/>
+          <path d="M2 36 L7 34 L6 36 L7 38 Z" fill="#9955dd"/>
+          <path d="M70 36 L65 34 L66 36 L65 38 Z" fill="#9955dd"/>
+          <line x1="11" y1="11" x2="15" y2="15" stroke="#5522aa" stroke-width="1" stroke-linecap="round"/>
+          <line x1="61" y1="11" x2="57" y2="15" stroke="#5522aa" stroke-width="1" stroke-linecap="round"/>
+          <line x1="11" y1="61" x2="15" y2="57" stroke="#5522aa" stroke-width="1" stroke-linecap="round"/>
+          <line x1="61" y1="61" x2="57" y2="57" stroke="#5522aa" stroke-width="1" stroke-linecap="round"/>
+          <text x="36" y="45" font-size="28" text-anchor="middle" fill="#9955dd" font-family="Georgia,serif" font-style="italic">SK</text>
+        </svg>
+      </div>
+      <h1 class="boot-name">Shaheer Khan</h1>
+      <p class="boot-tagline">Creative Writing &middot; Class of&nbsp;2024</p>
+    </div>
+  </div>
+
+  <!-- SVG filter definitions -->
+  <svg class="svg-filters" aria-hidden="true">
+    <defs>
+      <filter id="paper-grain" x="0%" y="0%" width="100%" height="100%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" result="noise"/>
+        <feColorMatrix type="saturate" values="0" in="noise" result="grey"/>
+        <feBlend in="SourceGraphic" in2="grey" mode="multiply" result="blend"/>
+        <feComposite in="blend" in2="SourceGraphic" operator="in"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- CRT scanline + vignette overlay -->
+  <div class="crt-overlay" aria-hidden="true"></div>
+
+  <!-- Desktop atmospheric nameplate -->
+  <div id="desktop-nameplate" aria-hidden="true">Shaheer Khan</div>
+
+  <!-- Desktop shortcut icons -->
+  <div id="desktop-icons">
+
+    <div class="desktop-icon" data-win="win-about" tabindex="0">
+      <div class="di-img">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <radialGradient id="ab-bg" cx="50%" cy="35%" r="60%">
+              <stop offset="0%" stop-color="#241048"/>
+              <stop offset="100%" stop-color="#080214"/>
+            </radialGradient>
+            <radialGradient id="ab-head" cx="38%" cy="36%" r="56%">
+              <stop offset="0%" stop-color="#d0a8ff"/>
+              <stop offset="100%" stop-color="#7744bb"/>
+            </radialGradient>
+          </defs>
+          <circle cx="20" cy="20" r="18.5" fill="url(#ab-bg)"/>
+          <circle cx="20" cy="20" r="18.5" stroke="#5522aa" stroke-width="1.5" fill="none"/>
+          <circle cx="20" cy="20" r="16" stroke="#3d1570" stroke-width="0.5" stroke-dasharray="2.5 3" fill="none"/>
+          <path d="M20 1.5 L21.2 4.2 L20 3.7 L18.8 4.2 Z" fill="#9955dd"/>
+          <path d="M20 38.5 L21.2 35.8 L20 36.3 L18.8 35.8 Z" fill="#9955dd"/>
+          <path d="M1.5 20 L4.2 18.8 L3.7 20 L4.2 21.2 Z" fill="#9955dd"/>
+          <path d="M38.5 20 L35.8 18.8 L36.3 20 L35.8 21.2 Z" fill="#9955dd"/>
+          <line x1="7" y1="7" x2="9.8" y2="9.8" stroke="#5522aa" stroke-width="0.9" stroke-linecap="round"/>
+          <line x1="33" y1="7" x2="30.2" y2="9.8" stroke="#5522aa" stroke-width="0.9" stroke-linecap="round"/>
+          <circle cx="20" cy="15" r="5.5" fill="url(#ab-head)" stroke="#d0a8ff" stroke-width="0.75"/>
+          <ellipse cx="18.5" cy="13" rx="2" ry="1.5" fill="rgba(255,255,255,0.22)"/>
+          <path d="M8.5 36.5 Q9.5 26.5 20 26.5 Q30.5 26.5 31.5 36.5" fill="#4422aa" stroke="#7744cc" stroke-width="0.75"/>
+        </svg>
+      </div>
+      <span class="di-label">About Me</span>
+    </div>
+
+    <div class="desktop-icon" data-win="win-works" tabindex="0">
+      <div class="di-img">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="mw-cover" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#f8f2e4"/>
+              <stop offset="100%" stop-color="#e4d4a8"/>
+            </linearGradient>
+            <linearGradient id="mw-b1" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#1e0840"/>
+              <stop offset="100%" stop-color="#0c0420"/>
+            </linearGradient>
+            <linearGradient id="mw-b2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#3d1f80"/>
+              <stop offset="100%" stop-color="#1e0840"/>
+            </linearGradient>
+          </defs>
+          <!-- Back book -->
+          <rect x="2" y="10" width="18" height="22" rx="1" fill="url(#mw-b1)" stroke="#2a1888" stroke-width="0.75"/>
+          <rect x="2" y="10" width="3" height="22" rx="1" fill="#241060"/>
+          <!-- Middle book -->
+          <rect x="6" y="6" width="18" height="22" rx="1" fill="url(#mw-b2)" stroke="#6633aa" stroke-width="1"/>
+          <rect x="6" y="6" width="3" height="22" fill="#4422a0"/>
+          <!-- Front book (parchment) -->
+          <rect x="11" y="2" width="22" height="26" rx="1" fill="url(#mw-cover)" stroke="#c0a060" stroke-width="1.5"/>
+          <rect x="11" y="2" width="3.5" height="26" fill="#7a4e18"/>
+          <rect x="11" y="2" width="22" height="2.5" rx="1" fill="rgba(255,255,255,0.22)"/>
+          <!-- Page lines -->
+          <line x1="18" y1="8"  x2="30" y2="8"  stroke="#b09050" stroke-width="0.75" opacity="0.65"/>
+          <line x1="18" y1="11" x2="30" y2="11" stroke="#b09050" stroke-width="0.75" opacity="0.65"/>
+          <line x1="18" y1="14" x2="30" y2="14" stroke="#b09050" stroke-width="0.75" opacity="0.65"/>
+          <line x1="18" y1="17" x2="30" y2="17" stroke="#b09050" stroke-width="0.75" opacity="0.65"/>
+          <line x1="18" y1="20" x2="25" y2="20" stroke="#b09050" stroke-width="0.75" opacity="0.4"/>
+          <!-- Bookmark -->
+          <path d="M29 2 L29 11.5 L27.5 10.5 L26 11.5 L26 2 Z" fill="#9b59b6" stroke="#cc99ff" stroke-width="0.5"/>
+          <!-- Monogram circle -->
+          <circle cx="15.5" cy="9" r="4" fill="#6633aa" stroke="#b080ff" stroke-width="0.75"/>
+          <text x="15.5" y="11.2" font-size="5.5" text-anchor="middle" fill="rgba(255,255,255,0.95)" font-family="Georgia,serif" font-style="italic">S</text>
+        </svg>
+      </div>
+      <span class="di-label">My Works</span>
+    </div>
+
+    <div class="desktop-icon" data-win="win-reading" tabindex="0">
+      <div class="di-img">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="rp-l" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#daccb0"/>
+              <stop offset="100%" stop-color="#f5edda"/>
+            </linearGradient>
+            <linearGradient id="rp-r" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#f5edda"/>
+              <stop offset="100%" stop-color="#daccb0"/>
+            </linearGradient>
+            <linearGradient id="rp-cover" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#3d1f80"/>
+              <stop offset="100%" stop-color="#1e0840"/>
+            </linearGradient>
+          </defs>
+          <!-- Shadow -->
+          <ellipse cx="20" cy="38.5" rx="15" ry="1.2" fill="rgba(0,0,0,0.2)"/>
+          <!-- Cover -->
+          <path d="M2 33 Q2 37 19 38 Q21 38.5 38 37 Q38 33 22 34.5 Q20 35 18 34.5 Z" fill="url(#rp-cover)" stroke="#6633aa" stroke-width="0.5"/>
+          <!-- Left page -->
+          <path d="M2 7.5 Q2 33 18 34.5 L18 6.5 Q10 5.5 2 7.5Z" fill="url(#rp-l)"/>
+          <!-- Right page -->
+          <path d="M22 6.5 L22 34.5 Q38 33 38 7.5 Q30 5.5 22 6.5Z" fill="url(#rp-r)"/>
+          <!-- Spine -->
+          <path d="M18 6.5 L18 34.5" stroke="#a08050" stroke-width="2.5"/>
+          <path d="M22 6.5 L22 34.5" stroke="#a08050" stroke-width="2.5"/>
+          <path d="M18.5 6 Q20 4.5 21.5 6 Q20 7 18.5 6Z" fill="#7a5020"/>
+          <!-- Lines left -->
+          <line x1="4"   y1="12.5" x2="16.5" y2="12.5" stroke="#b89050" stroke-width="0.65" opacity="0.7"/>
+          <line x1="4"   y1="16"   x2="16.5" y2="16"   stroke="#b89050" stroke-width="0.65" opacity="0.7"/>
+          <line x1="4"   y1="19.5" x2="16.5" y2="19.5" stroke="#b89050" stroke-width="0.65" opacity="0.7"/>
+          <line x1="4"   y1="23"   x2="16.5" y2="23"   stroke="#b89050" stroke-width="0.65" opacity="0.7"/>
+          <line x1="4"   y1="26.5" x2="13"   y2="26.5" stroke="#b89050" stroke-width="0.65" opacity="0.4"/>
+          <!-- Lines right -->
+          <line x1="23.5" y1="12.5" x2="36" y2="12.5" stroke="#b89050" stroke-width="0.65" opacity="0.7"/>
+          <line x1="23.5" y1="16"   x2="36" y2="16"   stroke="#b89050" stroke-width="0.65" opacity="0.7"/>
+          <line x1="23.5" y1="19.5" x2="36" y2="19.5" stroke="#b89050" stroke-width="0.65" opacity="0.7"/>
+          <line x1="23.5" y1="23"   x2="36" y2="23"   stroke="#b89050" stroke-width="0.65" opacity="0.7"/>
+          <!-- Drop cap -->
+          <text x="4" y="12" font-size="9" fill="#7744cc" font-family="Georgia,serif" font-style="italic" opacity="0.8">L</text>
+        </svg>
+      </div>
+      <span class="di-label">Reading</span>
+    </div>
+
+    <div class="desktop-icon" data-win="win-contact" tabindex="0">
+      <div class="di-img">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="ct-env" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#f8f2e0"/>
+              <stop offset="100%" stop-color="#ddc898"/>
+            </linearGradient>
+            <radialGradient id="ct-seal" cx="40%" cy="36%" r="56%">
+              <stop offset="0%" stop-color="#9944dd"/>
+              <stop offset="100%" stop-color="#3a1080"/>
+            </radialGradient>
+          </defs>
+          <!-- Shadow -->
+          <ellipse cx="20" cy="38.5" rx="16" ry="1.2" fill="rgba(0,0,0,0.18)"/>
+          <!-- Envelope body -->
+          <rect x="3" y="11" width="34" height="22" rx="1.5" fill="url(#ct-env)" stroke="#c0a060" stroke-width="1.5"/>
+          <!-- Bottom fold creases -->
+          <line x1="3"  y1="33" x2="15" y2="23" stroke="#b89050" stroke-width="0.6" opacity="0.45"/>
+          <line x1="37" y1="33" x2="25" y2="23" stroke="#b89050" stroke-width="0.6" opacity="0.45"/>
+          <!-- Flap shadow layer -->
+          <path d="M3 11 L20 23.5 L37 11" fill="rgba(0,0,0,0.06)"/>
+          <!-- Flap line -->
+          <path d="M3 11 L20 23.5 L37 11" fill="none" stroke="#c0a060" stroke-width="1.5" stroke-linejoin="round"/>
+          <!-- Wax seal -->
+          <circle cx="20" cy="24" r="8" fill="url(#ct-seal)"/>
+          <circle cx="20" cy="24" r="8" stroke="#cc99ff" stroke-width="0.75" fill="none"/>
+          <circle cx="20" cy="24" r="6" stroke="rgba(255,255,255,0.18)" stroke-width="0.5" fill="none"/>
+          <text x="20" y="27.5" font-size="7.5" text-anchor="middle" fill="rgba(255,255,255,0.92)" font-family="Georgia,serif" font-style="italic">SK</text>
+          <!-- Corner stamp -->
+          <rect x="30.5" y="13" width="7" height="6" rx="0.5" fill="none" stroke="#c0a060" stroke-width="0.75" stroke-dasharray="1.5 1.5"/>
+          <circle cx="34" cy="16" r="1.5" fill="#9b59b6" opacity="0.7"/>
+        </svg>
+      </div>
+      <span class="di-label">Contact</span>
+    </div>
+
+    <div class="desktop-icon" data-win="win-nowwriting" tabindex="0">
+      <div class="di-img">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="nw-body" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#3d2070"/>
+              <stop offset="100%" stop-color="#150530"/>
+            </linearGradient>
+            <linearGradient id="nw-page" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#f8f2e4"/>
+              <stop offset="100%" stop-color="#ecdcb8"/>
+            </linearGradient>
+          </defs>
+          <!-- Paper -->
+          <rect x="13" y="1" width="14" height="18.5" rx="0.5" fill="url(#nw-page)" stroke="#c0a060" stroke-width="1"/>
+          <line x1="16" y1="5.5" x2="24.5" y2="5.5" stroke="#b08840" stroke-width="0.6" opacity="0.7"/>
+          <line x1="16" y1="8.5" x2="24.5" y2="8.5" stroke="#b08840" stroke-width="0.6" opacity="0.7"/>
+          <line x1="16" y1="11.5" x2="24.5" y2="11.5" stroke="#b08840" stroke-width="0.6" opacity="0.7"/>
+          <line x1="16" y1="14.5" x2="21.5" y2="14.5" stroke="#b08840" stroke-width="0.6" opacity="0.45"/>
+          <!-- Cursor blink -->
+          <rect x="22.5" y="13.5" width="1.5" height="2.5" fill="#7733cc" opacity="0.9"/>
+          <!-- Typewriter body -->
+          <rect x="2" y="17" width="36" height="21" rx="2.5" fill="url(#nw-body)" stroke="#7744bb" stroke-width="1.5"/>
+          <rect x="2" y="17" width="36" height="3.5" rx="2.5" fill="rgba(255,255,255,0.09)"/>
+          <!-- Platen -->
+          <rect x="2" y="15.5" width="36" height="5.5" rx="1.5" fill="#2a1260" stroke="#6633aa" stroke-width="1"/>
+          <rect x="4" y="16" width="32" height="1.5" rx="0.75" fill="rgba(255,255,255,0.16)"/>
+          <!-- Knobs -->
+          <circle cx="5.5" cy="18.5" r="2.5" fill="#160640" stroke="#5522aa" stroke-width="1"/>
+          <circle cx="34.5" cy="18.5" r="2.5" fill="#160640" stroke="#5522aa" stroke-width="1"/>
+          <!-- Keys row 1 -->
+          <rect x="7"  y="24" width="4.5" height="3.5" rx="0.75" fill="#2e1468" stroke="#7744bb" stroke-width="0.75"/>
+          <rect x="13" y="24" width="4.5" height="3.5" rx="0.75" fill="#2e1468" stroke="#7744bb" stroke-width="0.75"/>
+          <rect x="19" y="24" width="4.5" height="3.5" rx="0.75" fill="#2e1468" stroke="#7744bb" stroke-width="0.75"/>
+          <rect x="25" y="24" width="4.5" height="3.5" rx="0.75" fill="#2e1468" stroke="#7744bb" stroke-width="0.75"/>
+          <rect x="31" y="24" width="4.5" height="3.5" rx="0.75" fill="#9b59b6" stroke="#c090ff" stroke-width="0.75"/>
+          <!-- Key highlights -->
+          <rect x="7.5"  y="24.5" width="3.5" height="1" rx="0.5" fill="rgba(255,255,255,0.14)"/>
+          <rect x="13.5" y="24.5" width="3.5" height="1" rx="0.5" fill="rgba(255,255,255,0.14)"/>
+          <rect x="19.5" y="24.5" width="3.5" height="1" rx="0.5" fill="rgba(255,255,255,0.14)"/>
+          <rect x="25.5" y="24.5" width="3.5" height="1" rx="0.5" fill="rgba(255,255,255,0.14)"/>
+          <!-- Spacebar -->
+          <rect x="10" y="30" width="20" height="3" rx="0.75" fill="#2a1060" stroke="#6633aa" stroke-width="1"/>
+          <rect x="11" y="30.5" width="18" height="1" rx="0.5" fill="rgba(255,255,255,0.1)"/>
+        </svg>
+      </div>
+      <span class="di-label">Now Writing</span>
+    </div>
+
+  </div><!-- /desktop-icons -->
+
+  <!-- ═══════════════════════════════════════════════════
+       WINDOW: My Works
+  ═══════════════════════════════════════════════════ -->
+  <div class="window is-hidden" id="win-works" data-pinned="true">
+    <div class="window-titlebar">
+      <svg class="win-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <rect x="1" y="3" width="9" height="11" rx="0.5" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.45)" stroke-width="0.75"/>
+        <rect x="4" y="1" width="9" height="11" rx="0.5" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.45)" stroke-width="0.75"/>
+        <rect x="6" y="2" width="8" height="11" rx="0.5" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.9)" stroke-width="0.75"/>
+        <line x1="8" y1="5"  x2="12" y2="5"  stroke="rgba(255,255,255,0.8)" stroke-width="0.7"/>
+        <line x1="8" y1="7"  x2="12" y2="7"  stroke="rgba(255,255,255,0.8)" stroke-width="0.7"/>
+        <line x1="8" y1="9"  x2="12" y2="9"  stroke="rgba(255,255,255,0.8)" stroke-width="0.7"/>
+        <circle cx="7.5" cy="5" r="1.2" fill="rgba(180,100,255,0.9)"/>
+      </svg>
+      <span class="window-title">My Works</span>
+      <div class="window-controls">
+        <button class="btn-minimize" title="Minimize"></button>
+        <button class="btn-maximize" title="Maximize"></button>
+        <button class="btn-close"    title="Close"></button>
+      </div>
+    </div>
+    <div class="window-menubar">
+      <span>File</span><span>View</span><span>Help</span>
+    </div>
+    <div class="window-body" id="works-list">
+      <div class="works-header" aria-hidden="true">
+        <span class="wh-dot"></span>
+        <span class="wh-title">Title</span>
+        <span class="wh-year">Year</span>
+      </div>
+      <ul class="works-list-ul"></ul>
+    </div>
+    <div class="window-statusbar">
+      <span class="status-text">8 items</span>
+      <span class="status-legend">
+        <span class="dot-poetry  legend-dot" data-filter="poetry"  title="Filter poetry"></span>Poetry
+        <span class="dot-fiction legend-dot" data-filter="fiction" title="Filter fiction"></span>Fiction
+        <span class="dot-prose   legend-dot" data-filter="prose"   title="Filter prose"></span>Prose
+      </span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       WINDOW: Reading Pane
+  ═══════════════════════════════════════════════════ -->
+  <div class="window is-hidden" id="win-reading" data-pinned="true">
+    <div class="window-titlebar">
+      <svg class="win-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M8 3 C7 2 3 2 2 3 L2 13 C3 12 7 12 8 13 C9 12 13 12 14 13 L14 3 C13 2 9 2 8 3Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.85)" stroke-width="0.75" stroke-linejoin="round"/>
+        <line x1="8" y1="3" x2="8" y2="13" stroke="rgba(255,255,255,0.95)" stroke-width="1"/>
+        <line x1="3.5" y1="6"  x2="7" y2="6"  stroke="rgba(255,255,255,0.5)" stroke-width="0.5"/>
+        <line x1="3.5" y1="8"  x2="7" y2="8"  stroke="rgba(255,255,255,0.5)" stroke-width="0.5"/>
+        <line x1="3.5" y1="10" x2="7" y2="10" stroke="rgba(255,255,255,0.5)" stroke-width="0.5"/>
+        <line x1="9"   y1="6"  x2="12.5" y2="6"  stroke="rgba(255,255,255,0.5)" stroke-width="0.5"/>
+        <line x1="9"   y1="8"  x2="12.5" y2="8"  stroke="rgba(255,255,255,0.5)" stroke-width="0.5"/>
+      </svg>
+      <span class="window-title">Reading Pane</span>
+      <div class="window-controls">
+        <button class="btn-minimize" title="Minimize"></button>
+        <button class="btn-maximize" title="Maximize"></button>
+        <button class="btn-close"    title="Close"></button>
+      </div>
+    </div>
+    <div class="window-menubar">
+      <span>File</span><span>Edit</span><span>View</span>
+    </div>
+    <div class="window-body reading-pane-body" id="reading-pane">
+      <div class="reading-content">
+        <div class="reading-empty" aria-label="No work selected">
+          <svg class="reading-empty-quill" width="44" height="68" viewBox="0 0 44 68" fill="none" aria-hidden="true">
+            <!-- Quill feather body -->
+            <path d="M22 3 Q40 14 41 36 Q36 28 22 62" stroke="#b89050" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            <!-- Feather left edge -->
+            <path d="M22 3 Q4 16 7 36 Q10 28 22 62" stroke="#d4b070" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+            <!-- Feather barbs left -->
+            <path d="M22 18 Q12 22 13 31" stroke="#c8a860" stroke-width="0.6" fill="none" opacity="0.7" stroke-linecap="round"/>
+            <path d="M22 28 Q14 31 15 38" stroke="#c8a860" stroke-width="0.6" fill="none" opacity="0.6" stroke-linecap="round"/>
+            <path d="M22 38 Q16 40 17 46" stroke="#c8a860" stroke-width="0.6" fill="none" opacity="0.5" stroke-linecap="round"/>
+            <!-- Feather barbs right -->
+            <path d="M24 18 Q33 21 32 30" stroke="#c8a860" stroke-width="0.6" fill="none" opacity="0.7" stroke-linecap="round"/>
+            <path d="M24 28 Q32 30 31 38" stroke="#c8a860" stroke-width="0.6" fill="none" opacity="0.6" stroke-linecap="round"/>
+            <path d="M23 38 Q30 39 29 46" stroke="#c8a860" stroke-width="0.6" fill="none" opacity="0.5" stroke-linecap="round"/>
+            <!-- Quill nib -->
+            <path d="M21 57 L22 66 L23 57 Z" fill="#5a3010" stroke="#3a1a08" stroke-width="0.5" stroke-linejoin="round"/>
+            <!-- Ink scratch line -->
+            <path d="M22 65 Q28 66 36 65" stroke="#3a1a08" stroke-width="0.8" stroke-linecap="round" opacity="0.35"/>
+          </svg>
+          <p class="reading-empty-title">A Writer's Library</p>
+          <p class="reading-empty-hint">Select a work from <em>My Works</em><br>to begin reading.</p>
+        </div>
+      </div>
+    </div>
+    <div class="window-statusbar">
+      <span class="status-text" id="reading-status">Ready</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       WINDOW: About Me
+  ═══════════════════════════════════════════════════ -->
+  <div class="window is-hidden" id="win-about" data-pinned="true">
+    <div class="window-titlebar">
+      <svg class="win-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <circle cx="8" cy="5.5" r="3.2" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.9)" stroke-width="0.75"/>
+        <path d="M2 15 Q2 10 8 10 Q14 10 14 15" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.85)" stroke-width="0.75" stroke-linecap="round"/>
+      </svg>
+      <span class="window-title">About Shaheer Khan</span>
+      <div class="window-controls">
+        <button class="btn-minimize" title="Minimize"></button>
+        <button class="btn-maximize" title="Maximize"></button>
+        <button class="btn-close"    title="Close"></button>
+      </div>
+    </div>
+    <div class="window-menubar">
+      <span>File</span><span>Edit</span><span>Help</span>
+    </div>
+    <div class="window-body about-body">
+      <h1 class="author-name">Shaheer Khan</h1>
+      <p class="author-degree">B.A. Creative Writing — Class of 2024</p>
+      <div class="author-rule" aria-hidden="true">
+        <svg width="100%" height="14" viewBox="0 0 220 14" preserveAspectRatio="none">
+          <line x1="0" y1="7" x2="88" y2="7" stroke="rgba(80,40,160,0.25)" stroke-width="0.75"/>
+          <path d="M94 7 L99 3 L104 7 L109 3 L114 7" stroke="rgba(80,40,160,0.35)" stroke-width="0.75" fill="none" stroke-linejoin="round"/>
+          <line x1="120" y1="7" x2="220" y2="7" stroke="rgba(80,40,160,0.25)" stroke-width="0.75"/>
+        </svg>
+      </div>
+      <p>Shaheer Khan graduated with a B.A. in Creative Writing in 2024. His work has been recognised with departmental honours and shortlisted for the University's Prize for Emerging Writers. He is currently completing his debut poetry collection, <em>The Bone Meridian</em>, which draws on questions of inheritance, displacement, and the textures of belonging across languages.</p>
+      <p>His writing moves between lyric and narrative modes, finding its concerns in the spaces where memory meets language — where one word in one tongue has no equivalent in another, and something true must be said around the gap instead. He is drawn to the ordinary as a way into the difficult.</p>
+      <p>Shaheer's work has appeared in <em>The Inkwell Review</em> and <em>New Meridian Quarterly</em>. He lives in the city where he was born, which he is still in the process of understanding.</p>
+      <div class="about-signature">S.K.</div>
+    </div>
+    <div class="window-statusbar">
+      <span class="status-text">biography.txt</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       WINDOW: Contact
+  ═══════════════════════════════════════════════════ -->
+  <div class="window is-hidden" id="win-contact" data-pinned="true">
+    <div class="window-titlebar">
+      <svg class="win-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <rect x="1.5" y="3.5" width="13" height="9" rx="0.5" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.9)" stroke-width="0.75"/>
+        <polyline points="1.5,4 8,9 14.5,4" stroke="rgba(255,255,255,0.85)" stroke-width="0.75" fill="none" stroke-linejoin="round"/>
+        <line x1="1.5" y1="12.5" x2="6"   y2="8.5" stroke="rgba(255,255,255,0.35)" stroke-width="0.5"/>
+        <line x1="14.5" y1="12.5" x2="10" y2="8.5" stroke="rgba(255,255,255,0.35)" stroke-width="0.5"/>
+      </svg>
+      <span class="window-title">Contact</span>
+      <div class="window-controls">
+        <button class="btn-minimize" title="Minimize"></button>
+        <button class="btn-maximize" title="Maximize"></button>
+        <button class="btn-close"    title="Close"></button>
+      </div>
+    </div>
+    <div class="window-menubar">
+      <span>File</span><span>View</span>
+    </div>
+    <div class="window-body contact-body">
+      <ul class="contact-list">
+        <li>
+          <span class="contact-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <rect x="1" y="3.5" width="14" height="9" rx="1" stroke="#7755aa" stroke-width="1" fill="rgba(80,40,130,0.1)"/>
+              <polyline points="1.5,4 8,9 14.5,4" stroke="#7755aa" stroke-width="1" fill="none" stroke-linejoin="round"/>
+              <line x1="1.5" y1="12.5" x2="5.5" y2="8.5" stroke="#7755aa" stroke-width="0.6" opacity="0.5"/>
+              <line x1="14.5" y1="12.5" x2="10.5" y2="8.5" stroke="#7755aa" stroke-width="0.6" opacity="0.5"/>
+            </svg>
+          </span>
+          <div class="contact-details">
+            <span class="contact-label">Electronic Mail</span>
+            <a href="mailto:shaheer@lorem.edu" class="contact-link">shaheer@lorem.edu</a>
+          </div>
+        </li>
+        <li>
+          <span class="contact-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="6.5" stroke="#7755aa" stroke-width="1" fill="rgba(80,40,130,0.1)"/>
+              <ellipse cx="8" cy="8" rx="3" ry="6.5" stroke="#7755aa" stroke-width="0.75" fill="none"/>
+              <line x1="1.5" y1="8" x2="14.5" y2="8" stroke="#7755aa" stroke-width="0.75"/>
+              <line x1="2.5" y1="5" x2="13.5" y2="5" stroke="#7755aa" stroke-width="0.5" opacity="0.55"/>
+              <line x1="2.5" y1="11" x2="13.5" y2="11" stroke="#7755aa" stroke-width="0.5" opacity="0.55"/>
+            </svg>
+          </span>
+          <div class="contact-details">
+            <span class="contact-label">Portfolio</span>
+            <a href="#" class="contact-link">lorem.com/shaheer-khan</a>
+          </div>
+        </li>
+        <li>
+          <span class="contact-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <rect x="2" y="7" width="12" height="8" rx="0.5" stroke="#7755aa" stroke-width="1" fill="rgba(80,40,130,0.1)"/>
+              <path d="M5 7 L5 4.5 Q5 2 8 2 Q11 2 11 4.5 L11 7" stroke="#7755aa" stroke-width="1" fill="none"/>
+              <rect x="6.5" y="10.5" width="3" height="4.5" rx="0.5" fill="#7755aa" opacity="0.45"/>
+              <circle cx="8" cy="9" r="1.2" fill="#9955dd" opacity="0.8"/>
+            </svg>
+          </span>
+          <div class="contact-details">
+            <span class="contact-label">Department</span>
+            <span class="contact-value">Creative Writing, Lorem University</span>
+          </div>
+        </li>
+        <li>
+          <span class="contact-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M8 2 Q12.5 2 12.5 7 Q12.5 11.5 8 14.5 Q3.5 11.5 3.5 7 Q3.5 2 8 2Z" stroke="#7755aa" stroke-width="1" fill="rgba(80,40,130,0.1)"/>
+              <circle cx="8" cy="7" r="2.2" fill="#9955dd" opacity="0.8" stroke="#7755aa" stroke-width="0.5"/>
+            </svg>
+          </span>
+          <div class="contact-details">
+            <span class="contact-label">Location</span>
+            <span class="contact-value">Lorem City, Lorem Province</span>
+          </div>
+        </li>
+      </ul>
+      <div class="contact-note">
+        <em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</em>
+      </div>
+    </div>
+    <div class="window-statusbar">
+      <span class="status-text">4 entries</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       WINDOW: Now Writing
+  ═══════════════════════════════════════════════════ -->
+  <div class="window is-hidden" id="win-nowwriting" data-pinned="true">
+    <div class="window-titlebar">
+      <svg class="win-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M11 2 L14 5 L6 13 L3 13 L3 10 Z" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.9)" stroke-width="0.75" stroke-linejoin="round"/>
+        <line x1="10"  y1="3"  x2="13" y2="6"  stroke="rgba(255,255,255,0.9)" stroke-width="0.75"/>
+        <line x1="3"   y1="10" x2="6"  y2="13" stroke="rgba(255,255,255,0.4)" stroke-width="0.5"/>
+        <line x1="2"   y1="15" x2="6"  y2="15" stroke="rgba(255,220,80,0.9)"  stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span class="window-title">Now Writing…</span>
+      <div class="window-controls">
+        <button class="btn-minimize" title="Minimize"></button>
+        <button class="btn-maximize" title="Maximize"></button>
+        <button class="btn-close"    title="Close"></button>
+      </div>
+    </div>
+    <div class="window-menubar">
+      <span>File</span><span>Edit</span>
+    </div>
+    <div class="window-body nowwriting-body">
+      <div class="wip-card">
+        <div class="wip-row">
+          <span class="wip-label">Project:</span>
+          <span class="wip-value project-title">The Bone Meridian</span>
+        </div>
+        <div class="wip-row">
+          <span class="wip-label">Type:</span>
+          <span class="wip-value">Poetry — Collection</span>
+        </div>
+        <div class="wip-row">
+          <span class="wip-label">Words:</span>
+          <span class="wip-value wip-counter">12,400</span>
+        </div>
+        <div class="wip-row">
+          <span class="wip-label">Status:</span>
+          <span class="wip-value"><span class="mood-badge">Revising</span></span>
+        </div>
+        <div class="wip-progress-label">Draft Progress — 38%</div>
+        <div class="wip-progress-container">
+          <div class="wip-progress-bar" style="width:38%"></div>
+        </div>
+        <div class="wip-blinking-cursor">▋</div>
+      </div>
+    </div>
+    <div class="window-statusbar">
+      <span class="status-text">WIP · in progress</span>
+    </div>
+  </div>
+
+  <!-- ═══ TASKBAR ═══ -->
+  <div id="taskbar">
+    <button id="start-btn" class="start-btn">
+      <svg class="start-logo" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+        <rect x="1"  y="1"  width="5.5" height="5.5" fill="#ff4444" rx="0.5"/>
+        <rect x="7.5" y="1"  width="5.5" height="5.5" fill="#44aa44" rx="0.5"/>
+        <rect x="1"  y="7.5" width="5.5" height="5.5" fill="#4444ff" rx="0.5"/>
+        <rect x="7.5" y="7.5" width="5.5" height="5.5" fill="#ffcc00" rx="0.5"/>
+      </svg>
+      <span>Start</span>
+    </button>
+    <div class="taskbar-divider"></div>
+    <div id="taskbar-windows">
+      <button class="taskbar-win-btn" data-win="win-works">My Works</button>
+      <button class="taskbar-win-btn" data-win="win-reading">Reading</button>
+      <button class="taskbar-win-btn" data-win="win-about">About Me</button>
+      <button class="taskbar-win-btn" data-win="win-contact">Contact</button>
+      <button class="taskbar-win-btn" data-win="win-nowwriting">Now Writing</button>
+    </div>
+    <div id="systray">
+      <span id="system-clock" class="system-clock">00:00</span>
+    </div>
+  </div>
+
+  <!-- ═══ START MENU ═══ -->
+  <div id="start-menu" class="hidden">
+    <div class="start-menu-sidebar">
+      <span class="sidebar-text">Shaheer Khan</span>
+    </div>
+    <ul class="start-menu-items">
+      <li data-action="open-all">
+        <span class="menu-item-icon">⊞</span> Open All Windows
+      </li>
+      <li data-action="arrange">
+        <span class="menu-item-icon">⊟</span> Arrange Windows
+      </li>
+      <li class="menu-separator"></li>
+      <li data-action="about-os">
+        <span class="menu-item-icon">ℹ</span> About This Portfolio
+      </li>
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
