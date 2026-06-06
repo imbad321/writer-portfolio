@@ -810,14 +810,22 @@ At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praese
   var BootScreen = {
     run: function (onComplete) {
       var screen = document.getElementById('boot-screen');
-      // Splash visible for ~1800ms, then CRT-collapse animation (~700ms)
+      var done   = false;
+      function finish() {
+        if (done) return;
+        done = true;
+        screen.style.display = 'none';
+        onComplete();
+      }
       setTimeout(function () {
         screen.classList.add('is-collapsing');
+        // Fallback: if animationend never fires (background tab, reduced-motion, etc.)
+        var fallback = setTimeout(finish, 900);
         screen.addEventListener('animationend', function () {
-          screen.style.display = 'none';
-          onComplete();
+          clearTimeout(fallback);
+          finish();
         }, { once: true });
-      }, 2800);
+      }, 2400);
     },
   };
 

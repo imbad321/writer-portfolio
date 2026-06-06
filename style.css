@@ -74,13 +74,12 @@ body {
   position: fixed; inset: 0; z-index: 1;
   pointer-events: none; will-change: opacity;
   background-image:
-    radial-gradient(ellipse at center, transparent 50%, rgba(8,0,20,0.72) 100%),
+    radial-gradient(ellipse at center, transparent 52%, rgba(4,0,12,0.62) 100%),
     repeating-linear-gradient(
       to bottom,
       transparent 0px, transparent 2px,
-      rgba(0,0,0,0.065) 2px, rgba(0,0,0,0.065) 4px
+      rgba(0,0,0,0.042) 2px, rgba(0,0,0,0.042) 4px
     );
-  mix-blend-mode: multiply;
   animation: crt-flicker 18s step-end infinite;
 }
 
@@ -109,7 +108,7 @@ body {
   position: absolute; inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
   background-size: 160px 160px;
-  opacity: 0.4;
+  opacity: 0.16;
   pointer-events: none;
 }
 
@@ -225,8 +224,8 @@ body {
 }
 
 @keyframes star-twinkle {
-  from { opacity: var(--star-min, 0.08); transform: scale(0.45); }
-  to   { opacity: var(--star-max, 0.95); transform: scale(1.55); }
+  from { opacity: var(--star-min, 0.08); transform: scale(0.72); }
+  to   { opacity: var(--star-max, 0.95); transform: scale(1.28); }
 }
 
 /* ─── WINDOW BASE ─── */
@@ -256,7 +255,7 @@ body {
 }
 
 .window:not(.is-focused):not(.is-minimized) {
-  opacity: 0.88;
+  opacity: 0.93;
 }
 
 .window.is-closing {
@@ -279,7 +278,7 @@ body {
 
 .window.is-hidden   { display: none; }
 
-.window.is-opening  { animation: win-open 150ms ease-out both; }
+.window.is-opening  { animation: win-open 220ms ease-out both; }
 
 @keyframes win-open {
   from { transform: scale(0.93); opacity: 0; }
@@ -540,8 +539,8 @@ body {
   border-color: var(--bevel-dark) var(--bevel-white) var(--bevel-white) var(--bevel-dark);
 }
 .reading-panel {
-  width: 440px;
-  flex-shrink: 0;
+  flex: 1;
+  min-width: 300px;
   overflow-y: auto;
   min-height: 0;
 }
@@ -621,8 +620,6 @@ body {
   background-image:
     radial-gradient(ellipse 60% 40% at 30% 20%, rgba(255,248,215,0.45) 0%, transparent 60%),
     radial-gradient(ellipse 40% 30% at 75% 75%, rgba(195,165,110,0.15) 0%, transparent 55%);
-  filter: url(#paper-grain);
-  transform: translateZ(0);
   padding: 24px 28px 28px;
   cursor: text;
   user-select: text;
