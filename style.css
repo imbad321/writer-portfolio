@@ -497,6 +497,7 @@ body {
   display: flex;
   overflow: hidden;
   padding: 0;
+  align-items: stretch;
 }
 .works-panel {
   width: 240px;
@@ -504,6 +505,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  min-height: 0;
   border-right: 2px solid;
   border-color: var(--bevel-dark) var(--bevel-white) var(--bevel-white) var(--bevel-dark);
 }
@@ -511,6 +513,7 @@ body {
   flex: 1;
   overflow-y: auto;
   min-width: 0;
+  min-height: 0;
 }
 
 /* ─── WORKS LIST ─── */
