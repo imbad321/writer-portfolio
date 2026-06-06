@@ -492,6 +492,27 @@ body {
 .legend-dot.is-inactive { opacity: 0.22; }
 .work-item.is-filtered  { display: none; }
 
+/* ─── COMBINED WORKS + READING LAYOUT ─── */
+.works-combined-body {
+  display: flex;
+  overflow: hidden;
+  padding: 0;
+}
+.works-panel {
+  width: 240px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  border-right: 2px solid;
+  border-color: var(--bevel-dark) var(--bevel-white) var(--bevel-white) var(--bevel-dark);
+}
+.reading-panel {
+  flex: 1;
+  overflow-y: auto;
+  min-width: 0;
+}
+
 /* ─── WORKS LIST ─── */
 .works-header {
   display: flex;
@@ -1373,6 +1394,17 @@ body {
 
   /* Works list full height on mobile */
   .works-body { overflow: visible !important; flex: 1 !important; }
+
+  /* Combined works+reading stacks vertically on mobile */
+  .works-combined-body { flex-direction: column; overflow-y: auto; }
+  .works-panel {
+    width: 100% !important;
+    border-right: none !important;
+    border-bottom: 2px solid;
+    border-color: var(--bevel-dark) var(--bevel-white) var(--bevel-white) var(--bevel-dark);
+    overflow-y: visible;
+  }
+  .reading-panel { padding: 22px 20px 40px !important; }
 
   /* Boot screen stays fixed during load */
   #boot-screen { position: fixed !important; }

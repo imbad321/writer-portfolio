@@ -314,7 +314,7 @@ At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praese
         }
 
         // All other windows stay closed
-        ['win-works', 'win-reading', 'win-nowwriting', 'win-contact'].forEach(function (id) {
+        ['win-works', 'win-nowwriting', 'win-contact'].forEach(function (id) {
           var w = state.windows[id];
           if (!w) return;
           w.closed = true; w.minimized = false;
@@ -327,13 +327,12 @@ At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praese
         return;
       }
 
-      // Arrange / Open-All: three-column layout
+      // Arrange / Open-All: two-column layout
       var positions = [
-        { id: 'win-works',      l: 110, t: 14,  w: 282, h: 316 },
-        { id: 'win-reading',    l: 404, t: 14,  w: 476, h: 674 },
-        { id: 'win-about',      l: 110, t: 342, w: 282, h: 346 },
-        { id: 'win-nowwriting', l: 892, t: 14,  w: 320, h: 316 },
-        { id: 'win-contact',    l: 892, t: 342, w: 320, h: 346 },
+        { id: 'win-works',      l: 110, t: 14,  w: 700, h: 560 },
+        { id: 'win-about',      l: 110, t: 586, w: 700, h: 280 },
+        { id: 'win-nowwriting', l: 822, t: 14,  w: 340, h: 270 },
+        { id: 'win-contact',    l: 822, t: 296, w: 340, h: 280 },
       ];
 
       positions.forEach(function (p, i) {
@@ -550,15 +549,13 @@ At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praese
         li.classList.toggle('is-selected', parseInt(li.dataset.id) === id);
       });
 
-      // Bring reading pane forward
-      if (MobileNav.isMobile()) {
-        MobileNav.show('win-reading');
-      } else {
-        var rp = state.windows['win-reading'];
+      // Bring the combined works window forward
+      if (!MobileNav.isMobile()) {
+        var rp = state.windows['win-works'];
         if (rp && (rp.minimized || rp.closed)) {
-          WindowManager.reopen('win-reading');
+          WindowManager.reopen('win-works');
         } else {
-          WindowManager.bringToFront('win-reading');
+          WindowManager.bringToFront('win-works');
         }
       }
     },

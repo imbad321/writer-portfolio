@@ -53,7 +53,6 @@
     <nav id="mob-nav" role="tablist" aria-label="Portfolio sections">
       <button class="mob-tab is-active" data-tab="win-about"      role="tab" aria-selected="true">About</button>
       <button class="mob-tab"           data-tab="win-works"      role="tab" aria-selected="false">Works</button>
-      <button class="mob-tab"           data-tab="win-reading"    role="tab" aria-selected="false">Reading</button>
       <button class="mob-tab"           data-tab="win-contact"    role="tab" aria-selected="false">Contact</button>
       <button class="mob-tab"           data-tab="win-nowwriting" role="tab" aria-selected="false">Writing</button>
     </nav>
@@ -156,53 +155,6 @@
         </svg>
       </div>
       <span class="di-label">My Works</span>
-    </div>
-
-    <div class="desktop-icon" data-win="win-reading" tabindex="0">
-      <div class="di-img">
-        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs>
-            <linearGradient id="rp-l" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stop-color="#daccb0"/>
-              <stop offset="100%" stop-color="#f5edda"/>
-            </linearGradient>
-            <linearGradient id="rp-r" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stop-color="#f5edda"/>
-              <stop offset="100%" stop-color="#daccb0"/>
-            </linearGradient>
-            <linearGradient id="rp-cover" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#3d1f80"/>
-              <stop offset="100%" stop-color="#1e0840"/>
-            </linearGradient>
-          </defs>
-          <!-- Shadow -->
-          <ellipse cx="20" cy="38.5" rx="15" ry="1.2" fill="rgba(0,0,0,0.2)"/>
-          <!-- Cover -->
-          <path d="M2 33 Q2 37 19 38 Q21 38.5 38 37 Q38 33 22 34.5 Q20 35 18 34.5 Z" fill="url(#rp-cover)" stroke="#6633aa" stroke-width="0.5"/>
-          <!-- Left page -->
-          <path d="M2 7.5 Q2 33 18 34.5 L18 6.5 Q10 5.5 2 7.5Z" fill="url(#rp-l)"/>
-          <!-- Right page -->
-          <path d="M22 6.5 L22 34.5 Q38 33 38 7.5 Q30 5.5 22 6.5Z" fill="url(#rp-r)"/>
-          <!-- Spine -->
-          <path d="M18 6.5 L18 34.5" stroke="#a08050" stroke-width="2.5"/>
-          <path d="M22 6.5 L22 34.5" stroke="#a08050" stroke-width="2.5"/>
-          <path d="M18.5 6 Q20 4.5 21.5 6 Q20 7 18.5 6Z" fill="#7a5020"/>
-          <!-- Lines left -->
-          <line x1="4"   y1="12.5" x2="16.5" y2="12.5" stroke="#b89050" stroke-width="0.65" opacity="0.7"/>
-          <line x1="4"   y1="16"   x2="16.5" y2="16"   stroke="#b89050" stroke-width="0.65" opacity="0.7"/>
-          <line x1="4"   y1="19.5" x2="16.5" y2="19.5" stroke="#b89050" stroke-width="0.65" opacity="0.7"/>
-          <line x1="4"   y1="23"   x2="16.5" y2="23"   stroke="#b89050" stroke-width="0.65" opacity="0.7"/>
-          <line x1="4"   y1="26.5" x2="13"   y2="26.5" stroke="#b89050" stroke-width="0.65" opacity="0.4"/>
-          <!-- Lines right -->
-          <line x1="23.5" y1="12.5" x2="36" y2="12.5" stroke="#b89050" stroke-width="0.65" opacity="0.7"/>
-          <line x1="23.5" y1="16"   x2="36" y2="16"   stroke="#b89050" stroke-width="0.65" opacity="0.7"/>
-          <line x1="23.5" y1="19.5" x2="36" y2="19.5" stroke="#b89050" stroke-width="0.65" opacity="0.7"/>
-          <line x1="23.5" y1="23"   x2="36" y2="23"   stroke="#b89050" stroke-width="0.65" opacity="0.7"/>
-          <!-- Drop cap -->
-          <text x="4" y="12" font-size="9" fill="#7744cc" font-family="Georgia,serif" font-style="italic" opacity="0.8">L</text>
-        </svg>
-      </div>
-      <span class="di-label">Reading</span>
     </div>
 
     <div class="desktop-icon" data-win="win-contact" tabindex="0">
@@ -317,13 +269,35 @@
     <div class="window-menubar">
       <span>File</span><span>View</span><span>Help</span>
     </div>
-    <div class="window-body" id="works-list">
-      <div class="works-header" aria-hidden="true">
-        <span class="wh-dot"></span>
-        <span class="wh-title">Title</span>
-        <span class="wh-year">Year</span>
+    <div class="window-body works-combined-body">
+      <div class="works-panel" id="works-list">
+        <div class="works-header" aria-hidden="true">
+          <span class="wh-dot"></span>
+          <span class="wh-title">Title</span>
+          <span class="wh-year">Year</span>
+        </div>
+        <ul class="works-list-ul"></ul>
       </div>
-      <ul class="works-list-ul"></ul>
+      <div class="reading-panel reading-pane-body" id="reading-pane">
+        <div class="reading-content">
+          <div class="reading-empty" aria-label="No work selected">
+            <svg class="reading-empty-quill" width="44" height="68" viewBox="0 0 44 68" fill="none" aria-hidden="true">
+              <path d="M22 3 Q40 14 41 36 Q36 28 22 62" stroke="#b89050" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+              <path d="M22 3 Q4 16 7 36 Q10 28 22 62" stroke="#d4b070" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+              <path d="M22 18 Q12 22 13 31" stroke="#c8a860" stroke-width="0.6" fill="none" opacity="0.7" stroke-linecap="round"/>
+              <path d="M22 28 Q14 31 15 38" stroke="#c8a860" stroke-width="0.6" fill="none" opacity="0.6" stroke-linecap="round"/>
+              <path d="M22 38 Q16 40 17 46" stroke="#c8a860" stroke-width="0.6" fill="none" opacity="0.5" stroke-linecap="round"/>
+              <path d="M24 18 Q33 21 32 30" stroke="#c8a860" stroke-width="0.6" fill="none" opacity="0.7" stroke-linecap="round"/>
+              <path d="M24 28 Q32 30 31 38" stroke="#c8a860" stroke-width="0.6" fill="none" opacity="0.6" stroke-linecap="round"/>
+              <path d="M23 38 Q30 39 29 46" stroke="#c8a860" stroke-width="0.6" fill="none" opacity="0.5" stroke-linecap="round"/>
+              <path d="M21 57 L22 66 L23 57 Z" fill="#5a3010" stroke="#3a1a08" stroke-width="0.5" stroke-linejoin="round"/>
+              <path d="M22 65 Q28 66 36 65" stroke="#3a1a08" stroke-width="0.8" stroke-linecap="round" opacity="0.35"/>
+            </svg>
+            <p class="reading-empty-title">A Writer's Library</p>
+            <p class="reading-empty-hint">Select a work to begin reading.</p>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="window-statusbar">
       <span class="status-text">8 items</span>
@@ -332,61 +306,7 @@
         <span class="dot-fiction legend-dot" data-filter="fiction" title="Filter fiction"></span>Fiction
         <span class="dot-prose   legend-dot" data-filter="prose"   title="Filter prose"></span>Prose
       </span>
-    </div>
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════
-       WINDOW: Reading Pane
-  ═══════════════════════════════════════════════════ -->
-  <div class="window is-hidden" id="win-reading" data-pinned="true">
-    <div class="window-titlebar">
-      <svg class="win-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-        <path d="M8 3 C7 2 3 2 2 3 L2 13 C3 12 7 12 8 13 C9 12 13 12 14 13 L14 3 C13 2 9 2 8 3Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.85)" stroke-width="0.75" stroke-linejoin="round"/>
-        <line x1="8" y1="3" x2="8" y2="13" stroke="rgba(255,255,255,0.95)" stroke-width="1"/>
-        <line x1="3.5" y1="6"  x2="7" y2="6"  stroke="rgba(255,255,255,0.5)" stroke-width="0.5"/>
-        <line x1="3.5" y1="8"  x2="7" y2="8"  stroke="rgba(255,255,255,0.5)" stroke-width="0.5"/>
-        <line x1="3.5" y1="10" x2="7" y2="10" stroke="rgba(255,255,255,0.5)" stroke-width="0.5"/>
-        <line x1="9"   y1="6"  x2="12.5" y2="6"  stroke="rgba(255,255,255,0.5)" stroke-width="0.5"/>
-        <line x1="9"   y1="8"  x2="12.5" y2="8"  stroke="rgba(255,255,255,0.5)" stroke-width="0.5"/>
-      </svg>
-      <span class="window-title">Reading Pane</span>
-      <div class="window-controls">
-        <button class="btn-minimize" title="Minimize"></button>
-        <button class="btn-maximize" title="Maximize"></button>
-        <button class="btn-close"    title="Close"></button>
-      </div>
-    </div>
-    <div class="window-menubar">
-      <span>File</span><span>Edit</span><span>View</span>
-    </div>
-    <div class="window-body reading-pane-body" id="reading-pane">
-      <div class="reading-content">
-        <div class="reading-empty" aria-label="No work selected">
-          <svg class="reading-empty-quill" width="44" height="68" viewBox="0 0 44 68" fill="none" aria-hidden="true">
-            <!-- Quill feather body -->
-            <path d="M22 3 Q40 14 41 36 Q36 28 22 62" stroke="#b89050" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-            <!-- Feather left edge -->
-            <path d="M22 3 Q4 16 7 36 Q10 28 22 62" stroke="#d4b070" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-            <!-- Feather barbs left -->
-            <path d="M22 18 Q12 22 13 31" stroke="#c8a860" stroke-width="0.6" fill="none" opacity="0.7" stroke-linecap="round"/>
-            <path d="M22 28 Q14 31 15 38" stroke="#c8a860" stroke-width="0.6" fill="none" opacity="0.6" stroke-linecap="round"/>
-            <path d="M22 38 Q16 40 17 46" stroke="#c8a860" stroke-width="0.6" fill="none" opacity="0.5" stroke-linecap="round"/>
-            <!-- Feather barbs right -->
-            <path d="M24 18 Q33 21 32 30" stroke="#c8a860" stroke-width="0.6" fill="none" opacity="0.7" stroke-linecap="round"/>
-            <path d="M24 28 Q32 30 31 38" stroke="#c8a860" stroke-width="0.6" fill="none" opacity="0.6" stroke-linecap="round"/>
-            <path d="M23 38 Q30 39 29 46" stroke="#c8a860" stroke-width="0.6" fill="none" opacity="0.5" stroke-linecap="round"/>
-            <!-- Quill nib -->
-            <path d="M21 57 L22 66 L23 57 Z" fill="#5a3010" stroke="#3a1a08" stroke-width="0.5" stroke-linejoin="round"/>
-            <!-- Ink scratch line -->
-            <path d="M22 65 Q28 66 36 65" stroke="#3a1a08" stroke-width="0.8" stroke-linecap="round" opacity="0.35"/>
-          </svg>
-          <p class="reading-empty-title">A Writer's Library</p>
-          <p class="reading-empty-hint">Select a work from <em>My Works</em><br>to begin reading.</p>
-        </div>
-      </div>
-    </div>
-    <div class="window-statusbar">
-      <span class="status-text" id="reading-status">Ready</span>
+      <span class="status-text" id="reading-status" style="margin-left:auto">Ready</span>
     </div>
   </div>
 
@@ -582,7 +502,6 @@
     <div class="taskbar-divider"></div>
     <div id="taskbar-windows">
       <button class="taskbar-win-btn" data-win="win-works">My Works</button>
-      <button class="taskbar-win-btn" data-win="win-reading">Reading</button>
       <button class="taskbar-win-btn" data-win="win-about">About Me</button>
       <button class="taskbar-win-btn" data-win="win-contact">Contact</button>
       <button class="taskbar-win-btn" data-win="win-nowwriting">Now Writing</button>
