@@ -817,7 +817,7 @@ At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praese
           screen.style.display = 'none';
           onComplete();
         }, { once: true });
-      }, 1800);
+      }, 2800);
     },
   };
 
