@@ -510,9 +510,9 @@ body {
   border-color: var(--bevel-dark) var(--bevel-white) var(--bevel-white) var(--bevel-dark);
 }
 .reading-panel {
-  flex: 1;
+  width: 440px;
+  flex-shrink: 0;
   overflow-y: auto;
-  min-width: 0;
   min-height: 0;
 }
 

@@ -277,6 +277,29 @@ At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praese
       win.closed    = false;
       win.minimized = false;
       win.el.classList.remove('is-hidden', 'is-minimized');
+
+      // Default sizes for first open; then use current size
+      var defaults = {
+        'win-works':      { w: 700, h: 500 },
+        'win-about':      { w: 420, h: 480 },
+        'win-contact':    { w: 320, h: 340 },
+        'win-nowwriting': { w: 320, h: 290 },
+      };
+      var el  = win.el;
+      var def = defaults[id] || { w: 400, h: 320 };
+      var w   = parseInt(el.style.width)  || def.w;
+      var h   = parseInt(el.style.height) || def.h;
+      el.style.width  = w + 'px';
+      el.style.height = h + 'px';
+
+      // Random position within the usable desktop area
+      var vw   = window.innerWidth;
+      var vh   = window.innerHeight;
+      var maxL = Math.max(40, vw  - w - 40);
+      var maxT = Math.max(20, vh - 36 - h - 20);
+      el.style.left = Math.round(40 + Math.random() * maxL * 0.7) + 'px';
+      el.style.top  = Math.round(20 + Math.random() * maxT * 0.6) + 'px';
+
       win.el.classList.add('is-opening');
       win.el.addEventListener('animationend', function () {
         win.el.classList.remove('is-opening');
