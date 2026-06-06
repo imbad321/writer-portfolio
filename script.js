@@ -8,135 +8,135 @@
   const WORKS = [
     {
       id: 1,
-      title: 'Cartography of the Unnamed',
+      title: 'Lorem Ipsum Dolor',
       type: 'poetry',
       year: 2023,
       excerpt:
 `I.
-There are cities my grandmother carried
-without names for them — the one
-where the river smelled of cardamom,
-the one where all the doors faced east.
+Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.
 
 II.
-I inherit her silence like a landmass:
-vast, unmarked, belonging
-to no atlas I have found.
-Each language she left me is a border.
+Ut enim ad minim veniam,
+quis nostrud exercitation ullamco
+laboris nisi ut aliquip ex ea
+commodo consequat.
 
 III.
-I draw maps in the margins of her letters.
-They lead nowhere I recognise.
-Still I fold them into my coat
-and call them origin, and call them home.`,
+Duis aute irure dolor in reprehenderit
+in voluptate velit esse cillum dolore
+eu fugiat nulla pariatur,
+excepteur sint occaecat cupidatat.`,
     },
     {
       id: 2,
-      title: 'The Translator\'s Daughter',
+      title: 'Sit Amet Consectetur',
       type: 'fiction',
       year: 2024,
       excerpt:
-`My mother translated other people's grief for a living. She sat in glass booths above courtrooms and hospital corridors, turning one kind of sorrow into another, word by careful word. She said translation was not about finding the right word but the right silence — the pause where two languages agree there is no equivalent, only approximation.
+`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-I grew up between her approximations. English for school, Urdu for anger, a third language we invented for the hours after dinner when neither felt right. In that language, the word for homesickness was the same as the word for tomorrow. We never found it strange.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-When I began to write, she read my work with the patience of a woman trained to wait for the precise moment of meaning. She underlined one sentence, once, in the margin of my first published story: This is what you could not say in either of our languages. I still do not know if it was praise.`,
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.`,
     },
     {
       id: 3,
-      title: 'Elegy for a Radio Left On',
+      title: 'Adipiscing Elit Sed',
       type: 'poetry',
       year: 2022,
       excerpt:
 `I.
-After the funeral we forgot to turn it off.
-For three days it spoke to the empty kitchen,
-cycling through the frequencies of elsewhere —
-a cricket match, a love song, the shipping forecast.
+Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.
 
 II.
-My father's hands, which had always known
-the exact pressure needed to silence a room,
-were busy learning to be still.
-We let the radio keep speaking for him.
+Nemo enim ipsam voluptatem quia
+voluptas sit aspernatur aut odit
+aut fugit, sed quia consequuntur
+magni dolores eos qui ratione.
 
 III.
-Now I think of sound as a kind of persistence:
-the way a voice continues in a room
-long after the one who spoke it
-has gone to somewhere the signal does not reach.`,
+Neque porro quisquam est qui dolorem
+ipsum quia dolor sit amet consectetur
+adipisci velit sed quia non numquam
+eius modi tempora incidunt.`,
     },
     {
       id: 4,
-      title: 'All the Things We Carried',
+      title: 'Eiusmod Tempor Incididunt',
       type: 'fiction',
       year: 2023,
       excerpt:
-`We crossed in February, which my mother later said was the wrong month for crossings. She meant the cold, but I think she also meant the light — how it fell on everything at that angle which refuses comfort, which insists on clarity, which says: look at what you are leaving, and look clearly.
+`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-We had one bag each. Mine held a novel I had already read three times, a photograph of my secondary school class, and a jar of dried apricots my grandmother had packed because she believed apricots prevented grief. They did not. But I ate them slowly, over many months, and by the time the jar was empty something had shifted in me that I cannot fully name.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-My sister carried her notebooks. My mother carried documents. My father, who was a man who had once needed very little, carried nothing — which is to say he carried everything, which is the way of fathers who do not speak about such things.`,
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.`,
     },
     {
       id: 5,
-      title: 'Notes on Forgetting',
+      title: 'Ut Labore Dolore',
       type: 'prose',
       year: 2023,
       excerpt:
-`I have been trying to remember the exact sound of my grandfather's voice and I cannot. I remember that it was low, and that it carried — he could speak quietly and still fill a room — and that it had a particular quality on Fridays, slower and more deliberate, as if he were saving words for something. But the voice itself is gone. What remains is the shape of it: the places where it would have been.
+`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-This is what forgetting actually is, I think. Not absence but outline. The space a thing occupied when it was present, now empty in the exact dimensions of what is lost. Which is why grief is so disorienting — you keep walking into furniture that isn't there.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-I write to furnish the empty rooms. It does not replace what was there. But it gives me somewhere to sit in the dark, and something to do with my hands while I'm waiting.`,
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.`,
     },
     {
       id: 6,
-      title: 'What the Monsoon Teaches',
+      title: 'Magna Aliqua Enim',
       type: 'poetry',
       year: 2022,
       excerpt:
 `I.
-It teaches you to trust the delay —
-how the sky spends a whole afternoon
-preparing to say one thing,
-and then says it without apology.
+Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.
 
 II.
-It teaches you the difference
-between what can be held off
-and what cannot:
-how long you can stand in a doorway.
+Ut enim ad minim veniam,
+quis nostrud exercitation ullamco
+laboris nisi ut aliquip ex ea
+commodo consequat.
 
 III.
-It teaches you that most thresholds
-are not about the rain.
-The rain is only the occasion.
-The rain is what asks you to decide.`,
+Duis aute irure dolor in reprehenderit
+in voluptate velit esse cillum dolore
+eu fugiat nulla pariatur,
+excepteur sint occaecat cupidatat.`,
     },
     {
       id: 7,
-      title: 'In the Language of the Old Country',
+      title: 'Veniam Quis Nostrud',
       type: 'fiction',
       year: 2024,
       excerpt:
-`My aunt sent letters in Urdu, which I could read slowly but could not read quickly enough. By the time I understood one sentence the shape of it had shifted, the way water in a cupped hand shifts before you can decide what to do with it. Reading her letters felt like translation of a place I had only visited in childhood: a country made partly of language and partly of the gaps in language where feeling lived.
+`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-She wrote about ordinary things. The price of mangoes. A neighbour's daughter's wedding. The new tiles in the mosque. And then, in the margin of one letter, in smaller handwriting as though she had not meant to include it: We are waiting for you to come back and you do not come and we have started to understand what it means that you do not come.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-I am still writing the reply. I have been writing it for four years. It begins: Auntie, I know. I know. Here is what I have made instead.`,
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt neque porro quisquam.`,
     },
     {
       id: 8,
-      title: 'What the House Remembers',
+      title: 'Exercitation Ullamco Laboris',
       type: 'prose',
       year: 2022,
       excerpt:
-`A house remembers through its resistances — the door that sticks in August, the particular creak of the second stair that announces children coming home late, the window latch that requires the exact pressure of the left thumb, learned by every person who has ever needed to close it against the rain. These are the things that survive the people who made them. Long after you forget the sound of a voice, a door will stick in August and you will remember the whole summer.
+`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-I sold my childhood home in March, which everyone agreed was a practical decision, which was true, and which had nothing to do with the fact that all winter I had been sleeping badly and waking in the small hours to the sound of the second stair, which is a sound that in our family means someone you love is home.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-The new owners have re-carpeted. The stair is quiet now. I know this because my mother drove past and told me. We did not talk about what it meant, which is how we talk about the things that matter most — by not talking about them, by circling close and saying something else, something true in a different direction.`,
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.`,
     },
   ];
 
